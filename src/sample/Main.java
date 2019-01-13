@@ -16,7 +16,6 @@ public static Scene scene;
         scene = new Scene(root);
         primaryStage.setScene(scene);
         Controller.stage = primaryStage;
-        primaryStage.setResizable(false);
         primaryStage.show();
     }
 
@@ -25,3 +24,5 @@ public static Scene scene;
         launch(args);
     }
 }
+
+        primaryStage.setResizable(false);
