@@ -7,11 +7,18 @@ IF EXISTS ( SELECT *
 	END
 GO
 
-	-- Tworzenie bazy danych	
+	-- Exaple path for windows machine
+	-- <<DB_PATH>> = C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\firma_medyczna.mdf
+	-- <<DB_LOGS>> = C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\firma_medyczna_log.ldf
+
+	-- Example path for linux machine
+	-- <<DB_PATH>>/var/opt/mssql/data/firma_medyczna_log.ldf
+	-- <<DB_LOGS>>/var/opt/mssql/data/firma_medyczna.mdf
+	-- Set pats in procedure below
 CREATE DATABASE firma_medyczna ON PRIMARY
 (
 	name = firma_medyczna,
-	filename = N'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\firma_medyczna.mdf',
+	filename = N'<<DB_PATH>>',
 	size = 100MB,
 	maxsize = 200MB,
 	filegrowth = 10%
@@ -20,7 +27,7 @@ CREATE DATABASE firma_medyczna ON PRIMARY
 LOG ON
 (
 	name = firma_medyczna_log,
-	filename = N'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\firma_medyczna_log.ldf',
+	filename = N'<<DB_LOGS>>',
 	size = 30MB,
 	maxsize = 50MB,
 	filegrowth = 10%

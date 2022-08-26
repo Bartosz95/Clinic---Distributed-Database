@@ -6,12 +6,19 @@ IF EXISTS ( SELECT *
 		DROP DATABASE firma_medyczna
 	END
 GO
-	
-	-- Tworzenie bazy danych	
+
+	-- Exaple path for windows machine
+	-- <<DB_PATH>> = C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\firma_medyczna.mdf
+	-- <<DB_LOGS>> = C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\firma_medyczna_log.ldf
+
+	-- Example path for linux machine
+	-- <<DB_PATH>>/var/opt/mssql/data/firma_medyczna_log.ldf
+	-- <<DB_LOGS>>/var/opt/mssql/data/firma_medyczna.mdf
+	-- Set pats in procedure below
 CREATE DATABASE firma_medyczna ON PRIMARY
 (
 	name = firma_medyczna,
-	filename = N'/var/opt/mssql/data/firma_medyczna.mdf',
+	filename = N'<<DB_PATH>>',
 	size = 100MB,
 	maxsize = 200MB,
 	filegrowth = 10%
@@ -20,7 +27,7 @@ CREATE DATABASE firma_medyczna ON PRIMARY
 LOG ON
 (
 	name = firma_medyczna_log,
-	filename = N'/var/opt/mssql/data/firma_medyczna_log.ldf',
+	filename = N'<<DB_LOGS>>',
 	size = 30MB,
 	maxsize = 50MB,
 	filegrowth = 10%
@@ -82,7 +89,7 @@ GO
 CREATE TABLE przychodnia
 (
 	id	int	NOT NULL CONSTRAINT PK_przychodnia PRIMARY KEY, --identity(2,2) id parzyste
-	nazwa	varchar(30) UNIQUE NOT NULL, -- text 2^30 – 1 bajtow lub varchar 1 – 8000 bajtów
+	nazwa	varchar(30) UNIQUE NOT NULL, -- text 2^30 ï¿½ 1 bajtow lub varchar 1 ï¿½ 8000 bajtï¿½w
 	miasto	varchar(30) NOT NULL,
 	ulica	varchar(30) UNIQUE NOT NULL
 )
