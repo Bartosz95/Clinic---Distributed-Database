@@ -1,7 +1,7 @@
 # Medical Clinic Desktop Mananger
 
 ## Abstract 
-Medical Clinic Desktop Mananger is allication which helps to manage your clinics. 
+Medical Clinic Mananger is allication which helps to manage your clinics. 
 You can work with a desktop user interface.
 The biggest advantage of this system is the fact that it works with distributed databases and has a great synchronised mechanism which manages your data between databases. 
 It allows you to keep data and has access to a database even if one instance is not available.
@@ -20,19 +20,19 @@ It is very useful if you deal with very important data.
 ## Tutorial 
 Desktop application was created in way to gives users the best experience. User doesn't know that the app works with a distributed database in the background. When the application starts it automatically logs into the database. Next you can see user interface like below. There are 5 tabs which are exactly the same as Views in the database. To check details about something press it. At the beginning o f your work you should create at least one clinic.
 
-![](doc/1.png)
+<p align="center"><p align="center"><img src="doc/1.png" height="400px"></p>
 
 If you press Add doctor (Dodaj doktora) button it will open a manager which allows you to add a doctor. You should fill all fields. In addition you should choose a clinic (nazwa przychodni) from the list.
 
-![](doc/2.png)
+<p align="center"><p align="center"><img src="doc/2.png" height="400px"></p>
 
 If you go to visits (Wizyty) tab you will see your visits.
 
-![](doc/3.png)
+<p align="center"><p align="center"><img src="doc/3.png" height="400px"></p>
 
 In this app you can easily manage all data in the database. Next picture shows the manager adding new visit.
 
-![](doc/3.png)
+<p align="center"><p align="center"><img src="doc/3.png" height="400px"></p>
 
 ## Description
 This system needs three machines with an OS system. 
@@ -55,7 +55,7 @@ Every view has its own ID.
 - View patients are connected with visits. This view has ID (id_patient), a name (imie_pacjenta) and a surname (nazwisko_pacjenta) of patient and ID (id_lekarz), a name (imie_lekarza) and a surname (nazwisko_lekarza) of doctor. It also contains the date (data), time (godzina) and description (opis) of the visit. 
 - Last view presents the examinations (badania) and contains ID, name, surname, pesel, type (type), and results (wyniki) of examination. 
 
-![](doc/main.png)
+<p align="center"><p align="center"><img src="doc/main.png" height="400px"></p>
 
 Some of the views are split vertically and some are horizontally. It means that some rows from view are kept only in one instance of the database and some are duplicated depending on needs. For instance the doctors' view are split vertically. 
 - columns name (imie), surname (nazwisko) are duplicated,
@@ -64,19 +64,19 @@ Some of the views are split vertically and some are horizontally. It means that 
 
 It means when the first instance will be destroyed users will have access to name (imie), surname (nazwisko), name of clinic (nazwa przychodni) and payroll (wyplata) of the doctor.
 
-![](doc/doctor.png)
+<p align="center"><p align="center"><img src="doc/doctor.png" height="400px"></p>
 
 The visit tables are split horizontally so no data is duplicated.
 - The date (data), time (godzina) and description (opis) are saved in one database
 - and the ID (id_patient) and name (imie_pacjenta) are on the second database.
 
-![](doc/visit.png)
+<p align="center"><p align="center"><img src="doc/visit.png" height="400px"></p>
 
 For clinics there was an implementing mechanism which allows to create records on only one instance. 
 The mechanizm decides where to create a new row depending on algorytm. 
 So some clinics are located on only one db instance so if one instance is destroyed half of clinics survive in the second db.
 
-![](doc/clinic.png)
+<p align="center"><p align="center"><img src="doc/clinic.png" height="400px"></p>
 
 #### Rules
 There are few rules which should be restricted in db to help keep databases organised.
