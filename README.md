@@ -1,7 +1,7 @@
-# Clinic application
+# Medical Clinic Desktop Mananger
 
 ## Abstract 
-Clinic system helps to manage your clinic. 
+Medical Clinic Desktop Mananger is allication which helps to manage your clinics. 
 You can work with a desktop user interface.
 The biggest advantage of this system is the fact that it works with distributed databases and has a great synchronised mechanism which manages your data between databases. 
 It allows you to keep data and has access to a database even if one instance is not available.
@@ -11,10 +11,10 @@ It is very useful if you deal with very important data.
 ## Technologies
 - Java
 - JavaFX
-- MySQL
+- MsSQL Server
 
 ## Requirements
-- 2 instance of MySQL
+- 2 instance of MsSQL Server
 - JRE
 
 ## Tutorial 
