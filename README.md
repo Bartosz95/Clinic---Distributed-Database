@@ -1,4 +1,4 @@
-# Medical Clinic Mananger
+# Medical Clinics Mananger
 
 ## Abstract 
 Medical Clinics Mananger is allication which helps to manage your clinics. 
