@@ -1,7 +1,7 @@
 # Medical Clinic Mananger
 
 ## Abstract 
-Medical Clinic Mananger is allication which helps to manage your clinics. 
+Medical Clinics Mananger is allication which helps to manage your clinics. 
 You can work with a desktop user interface.
 The biggest advantage of this system is the fact that it works with distributed databases and has a great synchronised mechanism which manages your data between databases. 
 It allows you to keep data and has access to a database even if one instance is not available.
