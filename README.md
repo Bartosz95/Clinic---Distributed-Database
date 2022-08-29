@@ -90,7 +90,7 @@ There are few rules which should be restricted in db to help keep databases orga
 ## Installation
 For installation this service you have to have two instances with MsSQL Service on two separate machines. Next you have to set static IP on each instance. This ip allows you to connect user applications to databases.
 
-<em> Unfortunately currently the IP address and db username with password is fixed in the code so the instance where you plan to connect should have IP address "192.168.43.5" and db user should be with username "sa" password "Student1"! (Controller.java:57)</em>
+<em> Unfortunately currently the IP address and db username with password is hardcoded in the code so the instance where you plan to connect should have IP address "192.168.43.5" and db user should be with username "sa" password "Student1"! (Controller.java:57)</em>
 
 In addition you should install Microsoft SQL Server Management Studio for me it was 17) which helps you to set up databases.
 For my testing I have chosen two OS:
