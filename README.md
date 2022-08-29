@@ -1,7 +1,7 @@
-# Medical Clinics Mananger
+# Medical Clinics Manager
 
 ## Abstract 
-Medical Clinics Mananger is allication which helps to manage your clinics. 
+Medical Clinics Manager is application which helps to manage your clinics. 
 You can work with a desktop user interface.
 The biggest advantage of this system is the fact that it works with distributed databases and has a great synchronised mechanism which manages your data between databases. 
 It allows you to keep data and has access to a database even if one instance is not available.
@@ -18,7 +18,7 @@ It is very useful if you deal with very important data.
 - JRE
 
 ## Tutorial 
-Desktop application was created in way to gives users the best experience. User doesn't know that the app works with a distributed database in the background. When the application starts it automatically logs into the database. Next you can see user interface like below. There are 5 tabs which are exactly the same as Views in the database. To check details about something press it. At the beginning o f your work you should create at least one clinic.
+Desktop application was created in a way to give users the best experience. User doesn't know that the app works with a distributed database in the background. When the application starts it automatically logs into the database. Next you can see the user interface like below. There are 5 tabs which are exactly the same as Views in the database. To check details about something press it. At the beginning o f your work you should create at least one clinic.
 
 <p align="center"><p align="center"><img src="doc/1.png" ></p>
 
@@ -30,7 +30,7 @@ If you go to visits (Wizyty) tab you will see your visits.
 
 <p align="center"><p align="center"><img src="doc/3.png" ></p>
 
-In this app you can easily manage all data in the database. Next picture shows the manager adding new visit.
+In this app you can easily manage all data in the database. Next picture shows the manager adding a new visit.
 
 <p align="center"><p align="center"><img src="doc/3.png" ></p>
 
@@ -114,5 +114,7 @@ Next you can enter the app directory and run java application Clinic.jar.
 ```
 java Clinic.jar
 ```
-You should see a desktop application in like in Tutorial.
+You should see a desktop application like in Tutorial.
+
+
 
